@@ -9,7 +9,7 @@ class Message extends Component{
     super(props)
 
     this.state={
-      'message':'Welcome Visitor',
+      'message':'Welcome Visitorrrrr',
       posts:[]
     }
 
