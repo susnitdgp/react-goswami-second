@@ -1,0 +1,14 @@
+.App {
+  padding: 20px;
+  border: 1px solid red;
+
+}
+h1, p {
+  font-family: Lato;
+}
+.para{ 
+
+  padding: 20px;
+  border: 1px solid blue;
+
+}
