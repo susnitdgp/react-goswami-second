@@ -1,5 +1,6 @@
 import React , {Component} from "react";
 import { Button} from "antd";
+import {UserConsumer} from "./UserContext"
 
 
 // Class component example
@@ -56,15 +57,31 @@ class Greet extends Component{
 
   render(){
     return(
-      <div class="para">
-        <h1>Hello from DIV props= {this.props.attr1}</h1>
-        <h1>Hello from DIV state= {this.state.attr1}</h1>
 
-        {this.props.children}
+      <UserConsumer>
 
-        <Button onClick={this.clickHandler}>State Change</Button>
+        {val =>{ 
 
-      </div>
+          return (
+
+            <div class="para">
+              <h1>Hello from DIV props= {this.props.attr1}</h1>
+              <h1>Hello from DIV state= {this.state.attr1}</h1>
+              <h1>Context value is : {val}</h1>
+
+              {this.props.children}
+
+              <Button onClick={this.clickHandler}>State Change</Button>
+
+              </div>
+          )
+
+        }
+
+        }
+      
+
+      </UserConsumer>
 
     );
   }
