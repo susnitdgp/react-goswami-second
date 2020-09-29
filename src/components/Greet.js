@@ -2,6 +2,7 @@ import React , {Component} from "react";
 import { Button} from "antd";
 import {UserConsumer} from "./UserContext"
 import BasicForm from "./BasicForm"
+import RefsDemo from "./RefsDemo"
 
 
 // Class component example
@@ -75,6 +76,8 @@ class Greet extends Component{
               <Button onClick={this.clickHandler}>State Change</Button>
 
               <BasicForm/>
+
+              <RefsDemo/>
 
               </div>
           )
