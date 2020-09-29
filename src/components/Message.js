@@ -21,7 +21,7 @@ class Message extends Component{
 
     localStorage.setItem('token','Hello Gowasimiii');
     let token=localStorage.getItem('token');
-    //localStorage.clear();
+    //localStorage.clear()
 
     sessionStorage.setItem('token','Hello Session Storage');
     //sessionStorage.clear()
