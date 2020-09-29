@@ -77,7 +77,7 @@ class Greet extends Component{
 
               <BasicForm/>
 
-              <RefsDemo/>
+              
 
               </div>
           )

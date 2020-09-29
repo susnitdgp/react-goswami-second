@@ -28,10 +28,17 @@ class BasicForm extends Component{
         'username':'attr val'
     }
 
-    
+    this.inputRef=React.createRef()
+
 
   }
 
+componentDidMount(){
+
+    this.inputRef.current.focus()
+
+
+  }
 
 
 
@@ -53,9 +60,10 @@ render(){
       <Form.Item
         label="Username"
         name="username"
+        
         rules={[{ required: true, message: 'Please input your username!' }]}
       >
-        <Input />
+        <Input ref={this.inputRef}/>
       </Form.Item>
 
       <Form.Item
