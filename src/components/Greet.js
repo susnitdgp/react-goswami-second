@@ -1,6 +1,7 @@
 import React , {Component} from "react";
 import { Button} from "antd";
 import {UserConsumer} from "./UserContext"
+import BasicForm from "./BasicForm"
 
 
 // Class component example
@@ -72,6 +73,8 @@ class Greet extends Component{
               {this.props.children}
 
               <Button onClick={this.clickHandler}>State Change</Button>
+
+              <BasicForm/>
 
               </div>
           )
