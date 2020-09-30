@@ -1,6 +1,11 @@
 import React , {Component} from "react";
 import "./style.css";
-import { BrowserRouter  } from 'react-router-dom';
+import { BrowserRouter as Router, Route } from 'react-router-dom';
+import Navigation from './Components/Navigation';
+import * as ROUTES from './Constants/routes';
+import LandingPage from './Components/Landing';
+import SignUpPage from './Components/SignUp';
+
 
 
 class App extends Component{
@@ -9,12 +14,20 @@ class App extends Component{
 
      return (
  
-     <BrowserRouter>
+     <Router>
+     <Navigation />
+     <hr/>
 
-     <h1>Hello</h1>
-      
+      <Route exact path={ROUTES.LANDING} component={LandingPage} />
+      <Route path={ROUTES.SIGN_UP} component={SignUpPage} />
+
+
+     
+
+     <h1 className="customClass">Hello</h1>
+     <h1 className="customClass">Hello</h1>
     
-     </BrowserRouter>
+     </Router>
   );
 
   }
