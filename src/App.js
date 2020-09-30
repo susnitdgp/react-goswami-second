@@ -9,7 +9,6 @@ import SignInPage from './Components/SignIn';
 import HomePage from './Components/Home'
 
 
-
 class App extends Component{
 
   render(){

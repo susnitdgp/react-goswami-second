@@ -15,7 +15,12 @@ const firebaseConfig = {
 
 class Firebase {
   constructor() {
-    app.initializeApp(firebaseConfig);
+
+    //to avoid duplicate instance error
+    if (!app.apps.length) {
+      app.initializeApp(firebaseConfig);
+    }
+    //app.initializeApp(firebaseConfig);
     this.auth = app.auth();
   }
 
