@@ -5,6 +5,7 @@ import Navigation from './Components/Navigation';
 import * as ROUTES from './Constants/routes';
 import LandingPage from './Components/Landing';
 import SignUpPage from './Components/SignUp';
+import SignInPage from './Components/SignIn';
 
 
 
@@ -22,6 +23,7 @@ class App extends Component{
      <hr/>
 
       <Route exact path={ROUTES.LANDING} component={LandingPage} />
+      <Route path={ROUTES.SIGN_IN} component={SignInPage} />
       <Route path={ROUTES.SIGN_UP} component={SignUpPage} />
 
 
