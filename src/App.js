@@ -18,6 +18,7 @@ class App extends Component{
      <Router>
 
      <Navigation />
+    
      <hr/>
 
       <Route exact path={ROUTES.LANDING} component={LandingPage} />
