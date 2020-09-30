@@ -9,6 +9,7 @@ import SignInPage from './Components/SignIn';
 import HomePage from './Components/Home'
 
 
+
 class App extends Component{
 
   render(){
@@ -27,7 +28,6 @@ class App extends Component{
       <Route path={ROUTES.HOME} component={HomePage} />
 
 
-    
      </Router>
   );
 

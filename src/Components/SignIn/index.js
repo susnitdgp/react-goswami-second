@@ -15,8 +15,6 @@ const SignInPage = () => (
   </div>
 );
 
-
-
 const INITIAL_STATE = {
   email: '',
   password: '',
