@@ -8,6 +8,7 @@ import SignUpPage from './Components/SignUp';
 
 
 
+
 class App extends Component{
 
   render(){
@@ -15,7 +16,7 @@ class App extends Component{
      return (
  
      <Router>
-     
+
      <Navigation />
      <hr/>
 

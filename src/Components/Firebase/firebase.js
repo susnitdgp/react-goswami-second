@@ -1,4 +1,5 @@
 import app from "firebase/app";
+import 'firebase/auth';
 
  
 const firebaseConfig = {
@@ -15,6 +16,7 @@ const firebaseConfig = {
 class Firebase {
   constructor() {
     app.initializeApp(firebaseConfig);
+    this.auth = app.auth();
   }
 }
  
