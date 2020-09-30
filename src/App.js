@@ -40,6 +40,10 @@ class App extends Component{
 
   render(){
 
+    const {authUser}= this.state
+
+    console.log(authUser)
+
      return (
  
      <AuthUserContext.Provider value={this.state.authUser}>
