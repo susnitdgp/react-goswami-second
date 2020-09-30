@@ -15,6 +15,7 @@ class App extends Component{
      return (
  
      <Router>
+     
      <Navigation />
      <hr/>
 
@@ -22,10 +23,6 @@ class App extends Component{
       <Route path={ROUTES.SIGN_UP} component={SignUpPage} />
 
 
-     
-
-     <h1 className="customClass">Hello</h1>
-     <h1 className="customClass">Hello</h1>
     
      </Router>
   );

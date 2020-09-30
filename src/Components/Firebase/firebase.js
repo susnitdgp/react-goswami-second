@@ -1,8 +1,7 @@
-import firebase from "firebase/app";
-import "firebase/auth";
-import "firebase/firestore";
+import app from "firebase/app";
+
  
- const firebaseConfig = {
+const firebaseConfig = {
     apiKey: "AIzaSyDq1fcL9GxuUw-JxCYNOHmK7IAx15FiD4g",
     authDomain: "ntpc-test.firebaseapp.com",
     databaseURL: "https://ntpc-test.firebaseio.com",
@@ -13,8 +12,10 @@ import "firebase/firestore";
   };
 
 
-// Initialize Firebase
-firebase.initializeApp(firebaseConfig);
-
-export const auth = firebase.auth();
-export const firestore = firebase.firestore();
+class Firebase {
+  constructor() {
+    app.initializeApp(firebaseConfig);
+  }
+}
+ 
+export default Firebase;
