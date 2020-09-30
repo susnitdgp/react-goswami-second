@@ -3,8 +3,9 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 
 import * as ROUTES from '../../Constants/routes';
-import { FirebaseContext } from '../Firebase';
 
+import { FirebaseContext } from '../Firebase';
+import { SignInLink } from '../SignIn';
 
 const SignUpPage = () => (
   <div>
@@ -12,6 +13,7 @@ const SignUpPage = () => (
     <FirebaseContext.Consumer>
       {firebase => <SignUpForm firebase={firebase} />}
     </FirebaseContext.Consumer>
+    <SignInLink/>
   </div>
 );
 
@@ -33,7 +35,7 @@ class SignUpForm extends Component {
  
   onSubmit = event => {
 
-    const { username, email, passwordOne } = this.state;
+    const {email, passwordOne } = this.state;
  
     this.props.firebase
       .doCreateUserWithEmailAndPassword(email, passwordOne)

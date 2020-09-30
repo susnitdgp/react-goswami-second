@@ -1,5 +1,6 @@
 import React , {Component} from "react";
 import "./style.css";
+import 'antd/dist/antd.css'; 
 import { BrowserRouter as Router, Route } from 'react-router-dom';
 import Navigation from './Components/Navigation';
 import * as ROUTES from './Constants/routes';
@@ -9,6 +10,8 @@ import SignInPage from './Components/SignIn';
 import HomePage from './Components/Home'
 
 import { withFirebase } from './Components/Firebase';
+import { AuthUserContext } from './Components/Session';
+import { Divider } from 'antd';
 
 
 class App extends Component{
@@ -39,11 +42,12 @@ class App extends Component{
 
      return (
  
+     <AuthUserContext.Provider value={this.state.authUser}>
      <Router>
 
-     <Navigation authUser={this.state.authUser} />
+     <Navigation/>
     
-     <hr/>
+     <Divider>Text</Divider>
 
       <Route exact path={ROUTES.LANDING} component={LandingPage} />
       <Route path={ROUTES.SIGN_IN} component={SignInPage} />
@@ -52,6 +56,7 @@ class App extends Component{
 
 
      </Router>
+     </AuthUserContext.Provider>
   );
 
   }

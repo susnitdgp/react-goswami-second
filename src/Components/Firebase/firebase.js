@@ -1,4 +1,4 @@
-import app from "firebase/app";
+import firebase_app from "firebase/app";
 import 'firebase/auth';
 
  
@@ -17,11 +17,12 @@ class Firebase {
   constructor() {
 
     //to avoid duplicate instance error
-    if (!app.apps.length) {
-      app.initializeApp(firebaseConfig);
+    if (!firebase_app.apps.length) {
+      firebase_app.initializeApp(firebaseConfig);
     }
     //app.initializeApp(firebaseConfig);
-    this.auth = app.auth();
+    
+    this.auth = firebase_app.auth();
   }
 
   // *** Auth API ***
@@ -38,6 +39,9 @@ class Firebase {
 
   doPasswordUpdate = password =>
     this.auth.currentUser.updatePassword(password);
+
+
+
 
 }
  
