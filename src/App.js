@@ -8,8 +8,32 @@ import SignUpPage from './Components/SignUp';
 import SignInPage from './Components/SignIn';
 import HomePage from './Components/Home'
 
+import { withFirebase } from './Components/Firebase';
+
 
 class App extends Component{
+
+  constructor(props) {
+    super(props);
+ 
+    this.state = {
+      authUser: null,
+    };
+  }
+
+  componentDidMount() {
+    this.listener = this.props.firebase.auth.onAuthStateChanged(
+      authUser => {
+        authUser
+          ? this.setState({ authUser })
+          : this.setState({ authUser: null });
+      },
+    );
+  }
+
+  componentWillUnmount() {
+    this.listener();
+  }
 
   render(){
 
@@ -17,7 +41,7 @@ class App extends Component{
  
      <Router>
 
-     <Navigation />
+     <Navigation authUser={this.state.authUser} />
     
      <hr/>
 
@@ -34,4 +58,4 @@ class App extends Component{
  
 }
 
-export default App
+export default withFirebase(App)
