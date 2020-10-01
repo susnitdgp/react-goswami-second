@@ -10,6 +10,8 @@ import { withFirebase } from '../Firebase';
 
 
 
+
+
 const SignInPage = () => (
   <div>
     <h1>SignIn</h1>
@@ -66,10 +68,6 @@ class SignInFormBase extends Component {
 
       <div>
 
-     
-      
-      
-
 
       <form onSubmit={this.onSubmit}>
         <input
@@ -89,6 +87,7 @@ class SignInFormBase extends Component {
         <button disabled={isInvalid} type="submit">
           Sign In
         </button>
+       
  
         {error && <p>{error.message}</p>}
       </form>
