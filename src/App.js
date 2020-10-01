@@ -98,11 +98,7 @@ class App extends Component{
         
         <Content style={{ padding: '0 24px', minHeight: 280 }}>Content
         
-           <Steps current={1}>
-    <Step title="Finished" description="This is a description." />
-    <Step title="In Progress" subTitle="Left 00:00:08" description="This is a description." />
-    <Step title="Waiting" description="This is a description." />
-  </Steps>
+          
         </Content>
       </Layout>
     </Content>
