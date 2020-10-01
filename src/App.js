@@ -10,7 +10,7 @@ import SignInPage from './Components/SignIn';
 import HomePage from './Components/Home'
 
 import { withAuthentication } from './Components/Session';
-import { Divider } from 'antd';
+
 
 
 
@@ -52,7 +52,7 @@ class App extends Component{
 
      <Navigation/>
     
-     <Divider>Text</Divider>
+   
 
       <Route exact path={ROUTES.LANDING} component={LandingPage} />
       <Route path={ROUTES.SIGN_IN} component={SignInPage} />
