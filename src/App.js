@@ -1,11 +1,12 @@
 import React , {Component,Suspense} from "react";
 import "./style.css";
-
+import 'antd/dist/antd.css';
 import { BrowserRouter, Route ,Switch} from 'react-router-dom';
 import Navigation from './Components/Navigation';
 import * as ROUTES from './Constants/routes';
 import LandingPage from './Components/Landing';
 import SignUpPage from './Components/SignUp';
+import  Sample from './HOC/Sample'
 
 
 
@@ -50,6 +51,8 @@ class App extends Component{
      return (
      <BrowserRouter>
      <Suspense fallback={<div>Loading...</div>}>
+
+     <Sample/>
 
      <Navigation/>
     
