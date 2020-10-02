@@ -8,16 +8,16 @@ import { SignUpLink } from '../SignUp';
 import { withFirebase } from '../Firebase';
 
 
-
-
-
-
 const SignInPage = () => (
-  <div>
-    <h1>SignIn</h1>
-    <SignInForm />
-    <SignUpLink />
-  </div>
+
+  
+      <div>
+      <h1>SignIn</h1>
+      <SignInForm />
+      <SignUpLink />
+      </div>
+  
+  
 );
 
 const INITIAL_STATE = {

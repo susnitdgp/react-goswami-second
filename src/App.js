@@ -1,17 +1,18 @@
-import React , {Component} from "react";
+import React , {Component,Suspense} from "react";
 import "./style.css";
 
-import { BrowserRouter, Route } from 'react-router-dom';
+import { BrowserRouter, Route ,Switch} from 'react-router-dom';
 import Navigation from './Components/Navigation';
 import * as ROUTES from './Constants/routes';
 import LandingPage from './Components/Landing';
 import SignUpPage from './Components/SignUp';
-import SignInPage from './Components/SignIn';
-import HomePage from './Components/Home'
+
+
 
 import { withAuthentication } from './Components/Session';
 
-
+const SignInPage = React.lazy(() => import('./Components/SignIn'));
+const HomePage=React.lazy(() => import('./Components/Home'));
 
 
 class App extends Component{
@@ -40,26 +41,26 @@ class App extends Component{
   }
 
  
-
   render(){
 
-    const {authUser,current}= this.state
+    const {authUser}= this.state
 
     console.log(authUser)
 
      return (
      <BrowserRouter>
+     <Suspense fallback={<div>Loading...</div>}>
 
      <Navigation/>
     
-   
-
+      <Switch>
       <Route exact path={ROUTES.LANDING} component={LandingPage} />
       <Route path={ROUTES.SIGN_IN} component={SignInPage} />
       <Route path={ROUTES.SIGN_UP} component={SignUpPage} />
       <Route path={ROUTES.HOME} component={HomePage} />
+      </Switch>
 
-
+    </Suspense>
      </BrowserRouter>
      
   );
