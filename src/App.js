@@ -45,7 +45,7 @@ class App extends Component{
 
     const {authUser}= this.state
 
-    console.log(authUser)
+    //console.log(authUser)
 
      return (
      <BrowserRouter>
