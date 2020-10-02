@@ -48,7 +48,9 @@ class Sample extends Component{
     return (
 
       <Row>
-      <Col span={6}>
+      <Col span={6} className="logo">
+
+      <div>Logo</div>
         
       </Col>
       <Col span={18}>
