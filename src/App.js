@@ -7,6 +7,7 @@ import * as ROUTES from './Constants/routes';
 import LandingPage from './Components/Landing';
 import SignUpPage from './Components/SignUp';
 import  Sample from './HOC/Sample'
+import StateHooks from "./Hooks/StateHooks"
 
 
 
@@ -53,6 +54,8 @@ class App extends Component{
      <Suspense fallback={<div>Loading...</div>}>
 
      <Sample/>
+
+     <StateHooks/>
 
      <Navigation/>
     
