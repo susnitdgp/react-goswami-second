@@ -8,7 +8,7 @@ import LandingPage from './Components/Landing';
 import SignUpPage from './Components/SignUp';
 import  Sample from './HOC/Sample'
 import StateHooks from "./Hooks/StateHooks"
-
+import Player from "./Player"
 
 
 import { withAuthentication } from './Components/Session';
@@ -56,6 +56,9 @@ class App extends Component{
      <Sample/>
 
      <StateHooks/>
+
+     <Player/>
+     
 
      <Navigation/>
     
